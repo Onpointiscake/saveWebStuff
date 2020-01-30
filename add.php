@@ -50,9 +50,9 @@ if(isset($_POST['submit'])){
     
     <?php include('templates/header.php'); ?>
 
-    <section class="container grey-text">
+    <section class="container white-text">
         <h4 class="center">Add a Site</h4>
-        <form action="add.php" method="POST" class="white">
+        <form action="add.php" method="POST" class="white add-form">
             <label for="">Name:</label>
             <input type="text" name="site_name" value="<?php echo htmlspecialchars($site_name) ?>">
             <div class="red-text">

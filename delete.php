@@ -1,16 +1,19 @@
 <?php 
-
 include('config/db_connection.php');
 
-if(isset($_POST['submit'])){
-    $site_id=$_GET['site_id'];
-    $sql = "DELETE FROM `sites` where id = '$site_id'";
-    $connect->exec($sql);
-}
-    
-?>
+if(isset($_POST['delete'])){
+    $id = $_POST['site_id'];
+    $pdoDeleteQuery = "DELETE FROM sites WHERE id=:id ";
+    $pdoDeleteQuery_run = $connect->prepare($pdoDeleteQuery);
+    $pdoDeleteQuery_exec = $pdoDeleteQuery_run->execute(array(":id"=>$id));
 
-<form action="delete.php" class="delete-form" method="POST">
-                            <input type="hidden" name="site_id" value="<?php echo $site['id'] ?>" class="btn brand z-depth-0">
-                            <input type="submit" name="delete" value="Delete" class="btn brand z-depth-0">
-</form>
+    if($pdoDeleteQuery_exec){
+        echo '<script>alert("Funcionó!")</script>';
+        header('Location: index.php');
+    }else{
+        echo '<script>alert("No se pudo realizar la acción, intentelo de nuevo en unos minutos")</script>';
+        header('Location: index.php');
+    }
+}
+
+?>

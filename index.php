@@ -20,8 +20,8 @@ echo "ERROR: " . $e->getMessage();
     
     <?php include('templates/header.php'); ?>
 
-    <h4 class="center grey-text">Your Sites</h4>
-    <h6 class="center grey-text">
+    <h4 class="center white-text">Your Sites</h4>
+    <h6 class="center white-text">
         You have saved <?php echo count($sites) ?> so far
     </h6>
     <div class="container">
@@ -32,9 +32,18 @@ echo "ERROR: " . $e->getMessage();
                     <div class="card z-depth-0">
                         <div class="card-content center">
                             <h6><?php echo htmlspecialchars($site['name']); ?></h6>
+                            
                             <a href="<?php $site['url'] ?>"><?php echo htmlspecialchars($site['url']); ?></a>
                         </div>
-                        <?php include('delete.php'); ?>
+                        <div class="forms-container">
+                        <form action="delete.php" class="delete-form" method="POST">
+                            <input type="hidden" name="site_id" value="<?php echo $site['id'] ?>" class="btn brand z-depth-0">
+                            <input type="submit" name="delete" value="Delete" class="btn brand z-depth-0">
+                        </form>
+            
+                                <li><a href="update.php" class="btn brand z-depth-2">Edit</a></li>
+                 
+                        </div>
                     </div>
               </div>  
 
