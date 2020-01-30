@@ -1,5 +1,8 @@
 <?php 
-
+session_start();
+if(!isset($_SESSION['user'])){
+    header('Location: login.php');
+}
 include('config/db_connection.php');
 
 $site_url = $site_name = '';
@@ -18,10 +21,10 @@ if(isset($_POST['update'])){
 
     if($pdoEditQuery_exec){
         echo '<script>alert("Funcionó!")</script>';
-        header('Location: index.php');
+        header('Location: home.php');
     }else{
         echo '<script>alert("No se pudo realizar la acción, intentelo de nuevo en unos minutos")</script>';
-        header('Location: index.php');
+        header('Location: home.php');
     }
 
 }

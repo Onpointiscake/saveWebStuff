@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+if(!isset($_SESSION['user'])){
+    header('Location: login.php');
+}
+
 include('config/db_connection.php');
 
 $site_url = $site_name = '';
@@ -33,7 +38,7 @@ if(isset($_POST['submit'])){
             $sql = "INSERT INTO `sites` (`id`, `name`, `url`, `created_at`) VALUES (NULL, '$site_name', '$site_url', current_timestamp())";
             $connect->exec($sql);
 
-            header('Location: index.php'); 
+            header('Location: home.php'); 
 
         } catch(PDOException $e){
 			echo $e->getMessage();

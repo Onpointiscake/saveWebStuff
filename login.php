@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Save Web Stuff | Web Saviour </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
 	  .brand{
@@ -40,11 +43,24 @@
     <nav class="white z-depth-0">
         <div class="container">
             <a href="home.php" class="brand-logo brand-text">Save Web Stuff</a>
-            <ul id="nav-mobile" class="right hide-on-small-and-down">
-                <li><a href="login.php" class="btn brand z-depth-0">Login</a></li>
-            </ul>
+           
         </div>
     </nav>
+
+    <section class="container white-text">
+        <h4 class="center">Login</h4>
+        <form action="config/validate.php" method="POST" class="white add-form">
+            <label for="">User:</label>
+            <input type="text" name="user" >
+            
+            <label for="">Password:</label>
+            <input type="password" name="password"  >
+           
+            <div class="center">
+                <input type="submit" name="enviar_login" value="enter" class="btn brand z-depth-0">
+            </div>
+        </form>
+    </section>
 
 </body>
 </html>

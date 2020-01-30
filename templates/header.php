@@ -32,14 +32,18 @@
       li{
         list-style-type:none !important;
       }
+      .save-btn{
+          margin-top: 10px;
+      }
   </style>
 </head>
 <body class="red accent-2">
     <nav class="white z-depth-0">
         <div class="container">
-            <a href="index.php" class="brand-logo brand-text">Save Web Stuff</a>
+            <a href="home.php" class="brand-logo brand-text">Save Web Stuff</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
-                <li><a href="add.php" class="btn brand z-depth-0">Save a Site</a></li>
+            <li><a class="waves-effect waves-teal btn-flat">Hola <?php echo $_SESSION['user'] ?></a></li>
+            <li><a href="./logout.php" class="btn brand z-depth-0">LOGOUT</a></li>
             </ul>
         </div>
     </nav>

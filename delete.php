@@ -9,10 +9,10 @@ if(isset($_POST['delete'])){
 
     if($pdoDeleteQuery_exec){
         echo '<script>alert("Funcionó!")</script>';
-        header('Location: index.php');
+        header('Location: home.php');
     }else{
         echo '<script>alert("No se pudo realizar la acción, intentelo de nuevo en unos minutos")</script>';
-        header('Location: index.php');
+        header('Location: home.php');
     }
 }
 
