@@ -42,8 +42,7 @@
 <body class="red accent-2">
     <nav class="white z-depth-0">
         <div class="container">
-            <a href="home.php" class="brand-logo brand-text">Save Web Stuff</a>
-           
+            <a href="index.php" class="brand-logo brand-text">Save Web Stuff</a>
         </div>
     </nav>
 
@@ -61,6 +60,9 @@
             </div>
         </form>
     </section>
-
-</body>
+    <section class="container center">
+    <li><a class="waves-effect waves-teal btn-flat">Not registered?</a></li>
+    <li><a href="signup.php" class="waves-effect waves-teal btn-flat yellow accent-4">SIGN UP NOW</a></li>
+    </section>
+   
 </html>

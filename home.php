@@ -6,17 +6,18 @@ if(!isset($_SESSION['user'])){
 }
 
 try{
-    // Conexión a la base de datos
+    
     include('config/db_connection.php');
+    // CAMBIAR A DINÁMICO
+    $userId = '19';
 
-// Sacar todos los resultados de la base de datos
-$sql = $connect->prepare('SELECT * FROM sites');
-$sql->execute();
-$sites = $sql->fetchAll();
+    $sql = $connect->prepare("SELECT * FROM sites WHERE id = $userId");
+    $sql->execute();
+    $sites = $sql->fetchAll();
 
-}catch(PDOException $e){
-echo "ERROR: " . $e->getMessage();
-}
+    }catch(PDOException $e){
+    echo "ERROR: " . $e->getMessage();
+    }
 
 ?>
 

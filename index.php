@@ -46,5 +46,5 @@
         </div>
     </nav>
 
-</body>
+    <?php include('templates/footer.php'); ?>
 </html>
