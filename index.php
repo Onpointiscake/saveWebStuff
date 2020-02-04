@@ -34,10 +34,27 @@
       li{
         list-style-type:none !important;
       }
+      .big-container{
+          background: #DCD6F7;
+          margin-top:0;
+          padding-bottom: 20px;
+          padding-top: 1px;
+      }
+      .landing-btn{
+          background: #424874;
+      }
+      .title-box{
+          padding: 0;
+          margin-bottom: 13px;
+      }
+      .subtitle-box h5{
+          margin-bottom: 20px;
+          margin-top: 15px;
+      }
   </style>
 </head>
 <body class="red accent-2">
-    <nav class="white z-depth-0">
+    <nav class="white nav-bla">
         <div class="container">
             <a href="home.php" class="brand-logo brand-text">Save Web Stuff</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
@@ -45,6 +62,20 @@
             </ul>
         </div>
     </nav>
+
+    <div class="container big-container">
+        <div class="row center title-box">
+            <h3>Capture Everything</h3>
+        </div>
+        <div class="row center title-img">
+            <img width="50%" src="assets/landing_page2.jpg"/>
+        </div>
+        <div class="row center subtitle-box">
+            <h5>A simple, fast, and easy way to save anything worthwile you find in the web</h5>
+            <a href="signup.php" id="download-button" class="btn-large waves-effect waves-light landing-btn lighten-1">Get Started</a>
+        </div>
+    </div>
+
 
     <?php include('templates/footer.php'); ?>
 </html>

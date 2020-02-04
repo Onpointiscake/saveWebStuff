@@ -11,7 +11,7 @@ try{
     // CAMBIAR A DINÁMICO
     $userId = '19';
 
-    $sql = $connect->prepare("SELECT * FROM sites WHERE id = $userId");
+    $sql = $connect->prepare("SELECT * FROM sites");
     $sql->execute();
     $sites = $sql->fetchAll();
 
